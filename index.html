@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Freaks</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/proj.css">
+<style>
+    body{
+        font-family: 'Lobster', cursive;
+        color:darkslategray;       
+        
+       background: url('backg.jpg');
+     background-size:cover;
+       background-repeat: no-repeat;
+       margin:0px;
+       padding:0px;
+       /*width:100%;
+       height:100vh;*/
+    }
+    .cont{
+        
+        /*border:2px solid rgb(139, 8, 139);*/
+        margin: 30px 32px;
+        padding:0px;
+        width:40%;
+        border-radius: 29px;
+        top:5px;
+    }
+    .left{
+/*border: 2px solid purple;*/
+display: inline-block;
+position: absolute;
+left: 34px;
+top:18px;
+    }
+    .right{
+/*border: 2px solid purple;*/
+display: block;
+width:180px;
+position:absolute;
+right: 20px;
+top:18px;
+    }
+    .right li{
+       display: inline-block;
+        text-align:end;
+        text-decoration: none;
+    }
+    .nbar{
+        display:inline-block;
+    }
+    .nbar li{
+        display:inline-block;
+        font-size: 20px;
+    }
+    .nbar li a{
+        color:white;
+        text-decoration: none;
+        padding:10px 5px;
+    }
+    .nbar li a:hover,.nbar li a.active{
+        
+        text-decoration: none;
+        color:grey;
+    }
+    .mid{
+/*border:2px solid purple;*/
+display: block;
+width:35%;
+margin:18px auto;
+    }
+.left img{
+    width:87px;
+    height:40px;
+    filter:invert(100%);
+}
+.left div{
+    text-align: center;
+    font-size:medium;
+        color: rgb(54, 5, 4);
+   font:bold;
+}
+.bttn{
+    margin: 0px 9px;
+    background-color:transparent;
+    color:black;
+    padding:10px 4px;
+    border:2px solid grey;
+    border-radius:10px;
+    font-size: medium;
+    cursor:pointer;
+    font-family: 'Lobster', cursive;
+}
+.bttn:hover{
+    background-color:rgb(216, 166, 29);
+}
+.formgroup input{
+text-align: center;
+display: block;
+padding: 1px;
+border:2px solid black;
+/* margin:10px auto; */
+font-size:15px;
+width:350px;
+border-radius: 25px;
+font-family:Lobster, cursive;
+position: absolute;
+left: 34px;
+top:18px;
+}
+.cont h2{
+    text-align: center;
+}
+.cont button{
+    display: block;
+    width:20%;
+    margin:35px auto;
+}
+#loginform
+{ left: 0px;
+   
+    display: none;
+}
+.formbox
+{
+   font-family: Lobster,cursive;
+    width:380px;
+	height:400px;
+	position:relative;
+	margin: 40px;
+	background:rgba(0,0,0,0.3);
+	padding:35px 35px;
+    overflow: hidden; 
+    border-radius: 28px;
+  
+}
+.buttonbox
+{  
+	width:220px;
+	margin:35px auto;
+	position:relative;
+		border-radius: 30px;
+}
+.togglebtn
+{  font-family: 'Lobster', cursive;
+	padding:11px 29px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+    font-size: medium;
+	outline: none;
+	position: relative;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 111px;
+	height: 100%;
+	background: rgb(216, 166, 29);
+	border-radius: 30px;
+	transition: .4s;
+}
+.inputgrouplogin
+{
+	top: 100px;
+	position:absolute;
+	width:279px;
+	transition:.4s;
+    font-family: Lobster,cursive;
+}
+.inputgroupregister
+{
+    top: 120px;
+	position:absolute;
+	width:279px;
+	transition:.4s;
+}
+.inputfield
+{
+	width: 100%;
+	padding:10px 0px;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid rgb(16, 87, 26);
+	outline:none;
+	background: transparent;
+}
+.submitbtn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: rgb(216, 166, 29);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.checkbox
+{
+	margin: 30px 10px 34px 0;
+}
+span
+{
+	color:#777;
+	font-size:12px;
+	bottom:67px;
+	position:absolute;
+}
+#login
+{
+	left:50px;
+}
+#login input
+{
+	color:white;
+	font-size:15;
+}
+#register
+{
+	left:450px;
+}
+#register input
+{
+	color:white;
+	font-size: 15;
+}
+</style>
+<body>
+    <header class="header">
+        <div class="left">  
+            <!-- logo class -->
+<img src="logo.jpg" alt="">
+        <div>Fitness Freaks</div>          
+     </div>
+        <div class="right">
+            <li><button class='bttn' onclick="document.getElementById('loginform').style.display='block'" style="width:auto;">Login</button></li>
+<li><button class="bttn">Contact us</button></li>
+        </div>
+        <div class="mid">
+<!-- navi bar -->
+<ul class="nbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Facilities</a></li>
+    <li><a href="#">Calculate BMI</a></li>
+    <li><a href="#">Trainers</a></li>
+</ul> 
+       </div>
+    </header>
+    <div class="cont">
+      <h2><div> With your motivation and our membership, we promise to discover the better and fitter you!</div>
+       <div>Join us now!</div></h2>
+           </div>
+    <div id='loginform'class='loginpage'>
+        <div class="formbox">
+            <div class='buttonbox'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='togglebtn'>Log In</button>
+                <button type='button'onclick='register()'class='togglebtn'>Register</button>
+            </div>
+            <form id='login' class='inputgrouplogin'>
+                <input type='text'class='inputfield'placeholder='Email Id' required >
+        <input type='password'class='inputfield'placeholder='Enter Password' required>
+        <input type='checkbox'class='checkbox'><span>Remember Password</span>
+        <button type='submit'class='submitbtn'>Log in</button>
+     </form>
+     <form id='register' class='inputgroupregister'>
+         <input type='text'class='inputfield'placeholder='First Name' required>
+         <input type='text'class='inputfield'placeholder='Last Name ' required>
+         <input type='email'class='inputfield'placeholder='Email Id' required>
+         <input type='password'class='inputfield'placeholder='Enter Password' required>
+         <input type='password'class='inputfield'placeholder='Confirm Password'  required>
+         <input type='checkbox'class='checkbox'><span>I agree to the terms and conditions</span>
+                <button type='submit'class='submitbtn'>Register</button>
+         </form>
+        </div>
+    </div>
+</div>
+<script>
+    var a=document.getElementById('login');
+    var b=document.getElementById('register');
+    var c=document.getElementById('btn');
+    function register()
+    {
+        a.style.left='-399px';
+        b.style.left='49px';
+        c.style.left='110px';
+    }
+    function login()
+    {
+        a.style.left='50px';
+        b.style.left='450px';
+        c.style.left='0px';
+    }
+</script>
+<script>
+    var modl = document.getElementById('loginform');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modl.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
